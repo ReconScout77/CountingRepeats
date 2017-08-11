@@ -19,6 +19,11 @@ namespace RepeatFinder.Models
       return _searchSentence;
     }
 
+    public string GetWord()
+    {
+      return _searchWord;
+    }
+
     public int CountRepeats()
     {
       String[] brokenSentence = _searchSentence.Split();
@@ -35,7 +40,7 @@ namespace RepeatFinder.Models
 
     public bool WordMatches(string wordToCheck)
     {
-      return (_searchWord == wordToCheck);
+      return (_searchWord.ToLower() == wordToCheck.ToLower());
     }
   }
 }
