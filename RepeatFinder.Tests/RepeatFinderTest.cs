@@ -11,10 +11,10 @@ namespace RepeatFinder.Tests
     [TestMethod]
     public void CountRepeats_ReturnsOne_Int()
     {
-      Finder find = new Finder("any", "any");
+      RepeatCounter repeats = new RepeatCounter("any", "any");
       int expected = 1;
 
-      int actual = find.CountRepeats();
+      int actual = repeats.CountRepeats();
 
       Assert.AreEqual(expected, actual);
     }
