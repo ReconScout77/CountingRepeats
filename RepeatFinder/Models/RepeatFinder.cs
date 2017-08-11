@@ -7,6 +7,7 @@ namespace RepeatFinder.Models
   {
     private string _searchWord;
     private string _searchSentence;
+    private char[] _punctuation = new char[] {' ', '\'', '\"', ',', '.', '!', '?', '/', '(', ')', '[', ']'};
 
     public RepeatCounter(string findWord, string sentence)
     {
@@ -26,7 +27,7 @@ namespace RepeatFinder.Models
 
     public int CountRepeats()
     {
-      String[] brokenSentence = _searchSentence.Split();
+      String[] brokenSentence = _searchSentence.Split(_punctuation);
       int timesRepeated = 0;
       for (int i = 0; i < brokenSentence.Length; i++)
       {

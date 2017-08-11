@@ -51,5 +51,16 @@ namespace RepeatFinder.Tests
 
       Assert.AreEqual(expected, actual);
     }
+
+    [TestMethod]
+    public void CountRepeats_ReturnsTwoFromMultipleWithPunctuation_Int()
+    {
+      RepeatCounter repeats = new RepeatCounter("any", "any? match any.");
+      int expected = 2;
+
+      int actual = repeats.CountRepeats();
+
+      Assert.AreEqual(expected, actual);
+    }
   }
 }

@@ -14,6 +14,7 @@ _This program receives two string inputs from the user, one is the word they wis
 | Counts out if a single word in a string matches one word in a string of multiple words. | "any", "match any" | 1 match |
 | Counts out if a single word in a string matches multiple words in a string of multiple words. | "any", "any match any" | 2 matches |
 | Counts out if a single word in a string matches multiple words in a string of multiple words despite case differences. | "Any", "any match any" | 2 matches |
+| Counts out if a single word in a string matches multiple words in a string of multiple words despite attached punctuation. | "any", "any? match any." | 2 matches |
 
 ## Setup/Installation Requirements
 
