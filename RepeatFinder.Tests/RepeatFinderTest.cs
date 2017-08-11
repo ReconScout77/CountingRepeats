@@ -29,5 +29,27 @@ namespace RepeatFinder.Tests
 
       Assert.AreEqual(expected, actual);
     }
+
+    [TestMethod]
+    public void CountRepeats_ReturnsTwoFromMultiple_Int()
+    {
+      RepeatCounter repeats = new RepeatCounter("any", "any match any");
+      int expected = 2;
+
+      int actual = repeats.CountRepeats();
+
+      Assert.AreEqual(expected, actual);
+    }
+
+    [TestMethod]
+    public void CountRepeats_ReturnsTwoFromMultipleWithVariedCase_Int()
+    {
+      RepeatCounter repeats = new RepeatCounter("Any", "any match anY");
+      int expected = 2;
+
+      int actual = repeats.CountRepeats();
+
+      Assert.AreEqual(expected, actual);
+    }
   }
 }
