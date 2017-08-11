@@ -21,12 +21,16 @@ namespace RepeatFinder.Models
 
     public int CountRepeats()
     {
+      String[] brokenSentence = _searchSentence.Split();
       int timesRepeated = 0;
-      if (this.WordMatches(_searchSentence))
+      for (int i = 0; i < brokenSentence.Length; i++)
       {
-        timesRepeated += 1;
+        if (this.WordMatches(brokenSentence[i]))
+        {
+          timesRepeated += 1;
+        }
       }
-      return timesRepeated;
+        return timesRepeated;
     }
 
     public bool WordMatches(string wordToCheck)
